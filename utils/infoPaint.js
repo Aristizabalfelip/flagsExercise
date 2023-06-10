@@ -1,12 +1,9 @@
-
 const url = window.location.search;
 const search = new URLSearchParams(url);
 const na = search.get('name')
 const link = `https://restcountries.com/v3.1/alpha/${na}`
 
 const section = document.querySelector('section')
-
-
 const getFlag = async (l) => {
     const res = await fetch(l)
     const data = await res.json();
@@ -14,11 +11,9 @@ const getFlag = async (l) => {
 }
 getFlag(link)
 
-
 const paintInfo = (flag) => {
     const keys = Object.keys(flag[0])
     const values = Object.values(flag[0])
-
     const container = document.createElement('div');
     container.innerHTML = ` 
                              <img src="${flag[0].flags.png}" alt="">
@@ -40,12 +35,9 @@ const paintInfo = (flag) => {
                             </div>
               
                         `;
-
     const getDivButt = container.children[2].children[1];
     const cantidadFronteras = flag[0].borders || { name: 'hola' }
-
     if (cantidadFronteras.length > 0) {
- 
         const createButtons = (arrayButtons) => {
             arrayButtons.forEach(element => {
                 getDivButt.innerHTML += `<a href="../pages/infoMore.html?name=${element}"><button>${element}</button></a>

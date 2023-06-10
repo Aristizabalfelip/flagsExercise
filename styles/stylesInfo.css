@@ -7,12 +7,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 60px;
-
 }
 section> div {
     display: flex;
     gap: 100px;
-
 }
 section {
     padding: 60px;
@@ -37,10 +35,6 @@ font-weight: 600;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    /* position: absolute;
-    top: 350px; 
-    left: 1200px;    */
-
 }
 img {
     height: 350px;
